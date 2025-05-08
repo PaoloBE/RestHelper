@@ -1,23 +1,13 @@
-build:
-  images:
+steps:
+- args:
+  - build
+  - -t
   - gcr.io/ownproy/github.com/paolobe/resthelper:$COMMIT_SHA
-  options:
-    logging: CLOUD_LOGGING_ONLY
-  steps:
-  - args:
-    - build
-    - -t
-    - gcr.io/ownproy/github.com/paolobe/resthelper:$COMMIT_SHA
-    - -f
-    - Dockerfile
-    - .
-    name: gcr.io/cloud-builders/docker
-createTime: '2025-05-08T01:09:42.326084266Z'
-github:
-  name: RestHelper
-  owner: PaoloBE
-  push:
-    branch: ^master$
-id: 84f3e059-fa4b-4853-a60c-8083b4d6f266
-name: rest-helper-trg
-serviceAccount: projects/ownproy/serviceAccounts/200557470623-compute@developer.gserviceaccount.com
+  - -f
+  - Dockerfile
+  - .
+  name: gcr.io/cloud-builders/docker
+images:
+- gcr.io/ownproy/github.com/paolobe/resthelper:$COMMIT_SHA
+options:
+  logging: CLOUD_LOGGING_ONLY
