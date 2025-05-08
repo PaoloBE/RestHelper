@@ -20,5 +20,4 @@ github:
     branch: ^master$
 id: 84f3e059-fa4b-4853-a60c-8083b4d6f266
 name: rest-helper-trg
-resourceName: projects/ownproy/locations/global/triggers/84f3e059-fa4b-4853-a60c-8083b4d6f266
 serviceAccount: projects/ownproy/serviceAccounts/200557470623-compute@developer.gserviceaccount.com
