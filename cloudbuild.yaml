@@ -1,7 +1,7 @@
 build:
   images:
   - gcr.io/ownproy/github.com/paolobe/resthelper:$COMMIT_SHA
-  options: 
+  options:
     logging: CLOUD_LOGGING_ONLY
   steps:
   - args:
